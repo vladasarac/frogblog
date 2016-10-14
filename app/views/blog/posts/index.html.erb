@@ -1,0 +1,10 @@
+<% provide(:page_title, "All Posts") %>
+<% provide(:blog_active, "active") %><!--ovo govori navigaciji da linku Blog da active klasu-->
+
+
+
+<div class="row">
+<!--pozivamo fajl _post.html.erb da prikaze svaki post kako ide iteracija-->
+  <%= render @posts %>
+</div>
+

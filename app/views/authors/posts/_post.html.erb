@@ -1,0 +1,10 @@
+<!--ovaj fajl poziva index.html.erb iz foldera 'FrogBlog/app/views/author/posts' da prikaze jedan post-->
+<tr>
+<!--naslov posta i link ka show metodu posts_controllera iz foldera 'FrogBlog/app/controllers/author' -->
+  <td><%= link_to post.title, authors_post_path(post)%></td> 
+  <td></td>
+<!--link ka edit metodu posts_controllera iz foldera 'FrogBlog/app/controllers/author' -->	
+  <td><%= link_to 'Edit', edit_authors_post_path(post), class: 'btn btn-sm btn-warning' %></td>
+<!--link ka destroy metodu posts_controllera iz foldera 'FrogBlog/app/controllers/author' -->
+  <td><%= link_to 'Remove', authors_post_path(post), method: :delete, data: { confirm: 'Are You Sure?' } , class: 'btn btn-sm btn-danger' %></td>
+</tr>

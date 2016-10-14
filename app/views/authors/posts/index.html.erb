@@ -1,0 +1,21 @@
+<% provide(:page_title, "All Posts") %>
+<% provide(:author, "active") %><!--ovo govori navigaciji da linku Blog da active klasu-->
+
+
+<!--ovaj fajl prikazuje sve postove adminu tj autoru-->
+<div class="row">
+  <div>
+    <!--link za kreiranje novog posta poziva new metod posts_controllera iz 'controllers/author'-->
+    <%= link_to 'New Post', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
+    <br>
+  </div>
+
+<!--pozivamo fajl _post.html.erb da prikaze svaki post kako ide iteracija-->
+  <table class="table table-striped">
+    <tr>
+      <th colspan="4">Tttle</th>	
+    </tr>
+  	<%= render @posts %>
+  </table> 
+</div>
+

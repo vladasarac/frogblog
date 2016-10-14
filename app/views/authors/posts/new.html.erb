@@ -1,0 +1,9 @@
+<% provide(:page_title, 'New Post') %>
+<% provide(:author, "active") %><!--ovo govori navigaciji da linku Blog da active klasu-->
+
+
+
+
+<%= render 'form', post: @post, url: authors_posts_url %>
+
+
